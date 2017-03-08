@@ -1,5 +1,6 @@
 pipeline:
   build:
-    image: ubuntu
+    image: java:8-alpine
     commands:
-      - sh run.sh
+      - javac Solution.java
+      - java Solution
