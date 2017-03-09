@@ -7,6 +7,6 @@ pipeline:
 
   notify:
     image: eisenxu/drone-ketsu-notification
-    entrypoint: https://intense-harbor-13956.herokuapp.com
+    entrypoint: https://intense-harbor-13956.herokuapp.com/evaluations
     when:
       status: [ success, failure ]
