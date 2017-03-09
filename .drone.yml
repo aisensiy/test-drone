@@ -4,3 +4,9 @@ pipeline:
     commands:
       - javac Solution.java
       - java Solution
+
+  notify:
+    image: eisenxu/drone-ketsu-notification
+    entrypoint: https://intense-harbor-13956.herokuapp.com
+    when:
+      status: [ success, failure ]
