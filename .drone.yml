@@ -2,7 +2,7 @@ pipeline:
   build:
     image: java:8-alpine
     commands:
-      - echo ${TEST}
+      - export TEST=${PASSWORD}
       - javac Solution.java
       - java Solution
 
