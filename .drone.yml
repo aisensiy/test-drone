@@ -2,13 +2,13 @@ pipeline:
   build:
     image: java:8-alpine
     commands:
-      - echo $PASSWORD
-      - export TEST=${PASSWORD}
+      - echo $EXAM_EMAIL
+      - export TEST=${EXAM_EMAIL}
       - javac Solution.java
       - java Solution
 
   notify:
     image: eisenxu/drone-ketsu-notification
-    host: https://intense-harbor-13956.herokuapp.com
+    host: https://ketsu-backend.herokuapp.com
     when:
       status: [ success, failure ]
