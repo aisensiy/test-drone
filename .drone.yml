@@ -9,6 +9,7 @@ pipeline:
 
   notify:
     image: eisenxu/drone-ketsu-notification
+    token: ${EXAM_ADMIN_TOKEN}
     host: https://ketsu-backend.herokuapp.com
     when:
       status: [ success, failure ]
